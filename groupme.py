@@ -11,12 +11,13 @@ class Client:
 	base = 'https://api.groupme.com/v3'
 	headers = {'Content-Type': 'application/json'}
 
-	def __init__(self, token, client_id=None):
+	def __init__(self, token=None, client_id=None):
 		self.token = token
 		self.client_id = client_id
 
 		# resources
 		self.group = resources.Group(self)
+		self.user = resources.User(self)
 
 	def get_auth_url(self):
 		"""Get URL for granting access to a user's data.
