@@ -1,6 +1,6 @@
 """groupme.py
 """
-import resources
+from . import resources
 
 __author__ = 'Brian Perrett'
 __date__ = '19-04-2018'
